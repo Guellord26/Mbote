@@ -1,0 +1,48 @@
+{
+  "name": "mbote",
+  "author": "GuelordMbiya",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build && next export",
+    "start": "next start",
+    "export": "next export",
+    "lint": "next lint",
+    "lint-fix": "next lint --fix"
+  },
+  "dependencies": {
+    "@editorjs/editorjs": "^2.25.0",
+    "@editorjs/paragraph": "^2.8.0",
+    "@emotion/cache": "^11.5.0",
+    "@emotion/react": "^11.5.0",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.0.5",
+    "@mui/lab": "^5.0.0-alpha.53",
+    "@mui/material": "^5.0.6",
+    "@mui/styles": "^5.0.2",
+    "chart.js": "^3.5.1",
+    "date-fns": "^2.25.0",
+    "draft-js": "^0.11.7",
+    "formik": "^2.1.5",
+    "history": "^5.0.0",
+    "next": "^12.0.3-canary.7",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-chartjs-2": "^3.0.4",
+    "react-dom": "^17.0.2",
+    "react-draft-wysiwyg": "^1.15.0",
+    "react-editor-js": "^2.1.0",
+    "react-perfect-scrollbar": "^1.5.8",
+    "run-parallel": "^1.2.0",
+    "sharp": "^0.30.7",
+    "uuid": "^8.3.0",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-next": "12.0.3-canary.7"
+  }
+}
