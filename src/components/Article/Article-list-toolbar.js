@@ -9,7 +9,7 @@ import {
     Typography
   } from '@mui/material';
   import NextLink from 'next/link';
-import { useRouter } from 'next/router';
+  import { useRouter } from 'next/router';
   import { Download as DownloadIcon } from '../../icons/download';
   import { Search as SearchIcon } from '../../icons/search';
   import { Upload as UploadIcon } from '../../icons/upload';
@@ -37,12 +37,14 @@ import { useRouter } from 'next/router';
         <Box sx={{ m: 1 }}>
           
           <Button
-            color="primary"
+            style={{backgroundColor: 'black'}}
             variant="contained"
             onClick={() => router.push('/editor')}
           >
             Ajouter Articles
           </Button>
+          
+            
         </Box>
       </Box>
       {/* <Box sx={{ mt: 3 }}>

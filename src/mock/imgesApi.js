@@ -1,0 +1,111 @@
+// import { v4 as uuid } from 'uuid';
+export const articles = [
+    {
+      // id: uuid(),
+      id: 1,
+      createdAt: '27/08/2022',
+      description: 'Le superyacht du président russe Vladimir Poutine a été repéré au large des côtes estoniennes, escorté par un navire des garde-côtes russes.',
+      media: '/images/poutine.jpg',     
+      title: 'Le superyacht de Vladimir Poutine ne s’appelle plus « Graceful », mais « Kosatka »',
+      nbVues: '50k',
+      contents: 5,
+      redacteur: "World business",
+      categorie: "Divertissement"
+    },
+    {
+        // id: uuid(),
+        id: 2,
+        createdAt: '27/08/2022',
+        description: 'WeHo, comme l’appellent les Angelenos, est le point de chute central idéal pour un séjour à LA, et rayonner autour.',
+        media: '/images/westHollywood.jpg',
+        contents: 7,
+        title: 'Si vous cherchez un hôtel rock’n’roll ? Direction le Sunset Marquis à West Hollywood',
+        nbVues: '23k',
+        redacteur: "World business",
+      categorie: "Divertissement"
+    },
+    {
+        // id: uuid(),
+        id: 3,
+        createdAt: '27/08/2022',
+        description: 'Femme Forbes 2020, cette coach spécialisée dans l’accompagnement des personnes en situation de handicap ne cesse d’enfoncer de nouvelles portes, comme elle le dit avec gourmandise. Entretien avec une dirigeante iconoclaste pour qui la générosité est une ambition.',
+        media: '/images/virginie.jpg',
+        contents: 6,
+        title: 'Virginie Delalande, une femme qui sait se faire entendre',
+        nbVues: '5M',
+        redacteur: "World business",
+      categorie: "Divertissement"
+      },
+      {
+        // id: uuid(),
+        id: 4,
+        createdAt: '27/08/2022',
+        description: 'Fondée en 2019 par Damien Patureaux, Lyzi est une application qui permet aux commerçants, aux enseignes et aux franchises d’accepter le paiement en cryptomonnaies en point de vente et en ligne.',
+        media: '/images/crypto.jpg',
+        contents: 10,
+        title: 'FOCUS TECH | Lyzi veut démocratiser l’achat en cryptomonnaie',
+        nbVues: '5M',
+        redacteur: "World business",
+      categorie: "Divertissement"
+      },
+      {
+        // id: uuid(),
+        id: 5,
+        createdAt: '27/08/2022',
+        description: 'La Maison Mumm présente le Champagne Mumm Cordon Rouge Stellar, le premier champagne pouvant être dégusté en impesanteur.',
+        media: '/images/champagne.jpeg',
+        contents: 4,
+        title: 'Mumm Cordon Rouge Stellar, le premier champagne adapté à l’impesanteur',
+        nbVues: '5M',
+        redacteur: "World business",
+      categorie: "Divertissement"
+      },
+      {
+        // id: uuid(),
+        id: 6,
+        createdAt: '27/08/2022',
+        description: 'Si la première place du classement des footballeurs les mieux payés au monde n’est plus occupée par Lionel Messi ou Cristiano Ronaldo, les deux légendes du foot devraient tout de',
+        media: '/images/mbape.jpg',
+        contents: 8,
+        title: 'Exclusif : Kilyan Mbappé est le footballeur le mieux payé au monde',
+        nbVues: '5M',
+        redacteur: "World business",
+      categorie: "Divertissement"
+      },
+      {
+        // id: uuid(),
+        id: 7,
+        createdAt: '27/08/2022',
+        description: 'Le rôle des conseils d’administration d’une entreprise est, pour faire court, de veiller aux intérêts de leurs investisseurs. Pourtant, un vent de changement souffle doucement sur la façon dont ils',
+        media: '/images/infoAdmin.jpg',
+        contents: 12,
+        title: 'Quelles informations doivent être diffusées dans les conseils d’administration ?',
+        nbVues: '5M',
+        redacteur: "World business",
+      categorie: "Divertissement"
+      },
+      {
+        // id: uuid(),
+        id: 8,
+        createdAt: '27/08/2022',
+        description: 'Alors que plus d’un jeune sur deux rencontrent des difficultés pour trouver un premier poste à la sortie de leurs études, le Village de l’Emploi souhaite leur offrir une véritable',
+        media: '/images/village-emploi.jpg',
+        contents: 9,
+        title: 'Village de l’Emploi : booster l’insertion des étudiants dans le domaine de l’IT',
+        nbVues: '5M',
+        redacteur: "World business",
+      categorie: "Divertissement"
+      },
+      {
+        // id: uuid(),
+        id: 9,
+        createdAt: '27/08/2022',
+        description: 'L’avocate franco-luxembourgeoise Jackye Elombo est spécialisée en droit social et en contentieux des affaires, elle aime à anticiper les litiges pour ses clients locaux et internationaux. Dans cet article, elle',
+        media: '/images/businessInside.jpeg',
+        contents: 12,
+        title: 'Jackye Elombo, une avocate engagée dans la prévention des litiges',
+        nbVues: '5M',
+        redacteur: "World business",
+      categorie: "Divertissement"
+      },
+] 

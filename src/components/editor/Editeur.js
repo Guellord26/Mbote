@@ -26,12 +26,9 @@ function uploadImageCallBack(file) {
 
 export const Editeur = () => (
   <Container>
-     <Typography
-                color="textPrimary"
-                variant="h4"
-              >
-                  EDITEUR
-              </Typography>
+     <Typography color="textPrimary" variant="h4">
+        EDITEUR
+     </Typography>
 <Box sx={{ mb: 3, p: 1, border: "1px solid grey", borderRadius: "5px" }}>
   <Editor
     wrapperClassName="demo-wrapper"
@@ -47,14 +44,14 @@ export const Editeur = () => (
   />
 </Box>
 <Button
-                color="primary"
-                // disabled={formik.isSubmitting}
-                // fullWidth
-                size="large"
-                type="submit"
-                variant="contained"
-              >
-                Editer
-              </Button>
+style={{backgroundColor: "black"}}
+  // color="primary"
+  
+  size="large"
+  type="submit"
+  variant="contained"
+>
+  Editer
+</Button>
 </Container>
 );
