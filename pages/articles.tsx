@@ -11,7 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import { articles } from "../src/mock/imgesApi";
-import { ArticleListToolbar } from "../src/Components/Article/article-list-toolbar";
+// import { ArticleListToolbar } from "../src/Components/Article/article-list-toolbar";
 import { ArticleCard } from "../src/Components/Article/article-card";
 import { DashboardLayout } from "../src/Components/Dashboard/dashboard-layout";
 import { PaginatedItems } from "../src/Components/Pagnations/Pagination";
@@ -49,7 +49,7 @@ const Article = () => {
       </Head>
       <Container>
         <div className="">
-          <ArticleListToolbar />
+          {/* <ArticleListToolbar /> */}
         </div>
 
         <Divider />
