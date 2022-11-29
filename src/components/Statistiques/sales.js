@@ -3,9 +3,9 @@ import { Box, Button, Card, CardContent, CardHeader, Divider, useTheme } from '@
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { Chart } from 'react-chartjs-2';
-import { Chart as ChartJS, LineController, LineElement, PointElement, LinearScale, CategoryScale, Title } from 'chart.js';
+import { Chart as ChartJS, LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title } from 'chart.js';
 
-ChartJS.register(LineController, LineElement, PointElement, LinearScale, CategoryScale, Title);
+ChartJS.register(LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title);
 
 
 
@@ -22,8 +22,8 @@ export const Sales = (props) => {
         barThickness: 12,
         borderRadius: 4,
         categoryPercentage: 0.5,
-        data: [18, 5, 19, 27, 29, 19, 20],
-        label: 'This year',
+        data: [18, 5, 19, 27, 29, 19, 20, 25, 22, 28, 40, 33, 29 ],
+        label: 'Cette année',
         maxBarThickness: 10
       },
       {
@@ -32,12 +32,12 @@ export const Sales = (props) => {
         barThickness: 12,
         borderRadius: 4,
         categoryPercentage: 0.5,
-        data: [11, 20, 12, 29, 30, 25, 13],
-        label: 'Last year',
+        data: [11, 20, 12, 29, 30, 25, 13, 21, 22, 24, 12, 26, 27],
+        label: "L'année passée",
         maxBarThickness: 10
       }
     ],
-    labels: ['1 Aug', '2 Aug', '3 Aug', '4 Aug', '5 Aug', '6 Aug', '7 aug']
+    labels: ['1 Jan', '2 Fev', '3 Mar', '4 Avr', '5 Mai', '6 Jui', '7 Juil', '8 Aou', '9 Sep', '10 Oct', '11 Nov', '12 Dec']
   };
 
   const options = {
@@ -110,11 +110,8 @@ export const Sales = (props) => {
             position: 'relative'
           }}
         >
-          {/* <Bar
-            data={data}
-            options={options}
-          /> */}
-           <Chart type='line' data={data} />
+         
+           <Chart type='bar' data={data} />
         </Box>
        
       </CardContent>

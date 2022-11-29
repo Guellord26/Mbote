@@ -11,7 +11,7 @@ export const ArticleCard = ({ article, ...rest }) => {
   const voir = (id) => {
     console.log("Bonjour");
     router.push({
-      pathname: "/lecture",
+      pathname: "/readArticle",
       query: { id: id },
     });
   };

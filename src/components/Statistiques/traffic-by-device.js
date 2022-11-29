@@ -3,12 +3,11 @@ import { Box, Card, CardContent, CardHeader, Divider, Typography, useTheme } fro
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import PhoneIcon from '@mui/icons-material/Phone';
 import TabletIcon from '@mui/icons-material/Tablet';
-import { Chart } from 'react-chartjs-2';
-import { Chart as ChartJS, LineController, BarElement, PointElement, LinearScale, CategoryScale, Title } from 'chart.js';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Doughnut } from 'react-chartjs-2';
 
-ChartJS.register(LineController, BarElement, PointElement, LinearScale, CategoryScale, Title);
+ChartJS.register(ArcElement, Tooltip, Legend);
 
-import {CChart} from '@coreui/react-chartjs'
 
 
 export const TrafficByDevice = (props) => {
@@ -102,16 +101,18 @@ export const TrafficByDevice = (props) => {
       <CardContent>
         <Box
           sx={{
-            height: 300,
+            height: 275,
             position: 'relative'
           }}
         >
           
-          {/* <CChart
-            type='doughnut'
-            data={data}
-          /> */}
-          <Chart type='bar' data={chartData} />
+          <Doughnut
+              data={chartData}
+              options={{
+                responsive: true,
+                maintainAspectRatio: true,
+              }}
+               />
         </Box>
         <Box
           sx={{

@@ -19,7 +19,7 @@ export const DashboardLayout = (props) => {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
 
   return (
-    <>
+    <div className="bg-blue-200">
       <DashboardLayoutRoot>
         <Box
           sx={{
@@ -39,6 +39,6 @@ export const DashboardLayout = (props) => {
       /> */}
       <Dashboard  onClose={() => setSidebarOpen(false)}
         open={isSidebarOpen}/>
-    </>
+    </div>
   );
 };

@@ -1,7 +1,14 @@
-import { Avatar, Card, CardContent, Grid, Typography } from '@mui/material';
+import { Avatar, Card, CardContent, Grid, Typography, Button, Box} from '@mui/material';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import { useRouter } from 'next/router';
+import AddIcon from '@mui/icons-material/Add';
 
-export const TotalProfit = (props) => (
+export const TotalProfit = (props) => {
+
+
+  const router = useRouter()
+
+  return(
   <Card {...props}>
     <CardContent>
       <Grid
@@ -15,8 +22,9 @@ export const TotalProfit = (props) => (
             gutterBottom
             variant="overline"
           >
-            TOTAL PROFIT
+            REVENU PUBLICITAIRE
           </Typography>
+
           <Typography
             color="textPrimary"
             variant="h4"
@@ -34,8 +42,28 @@ export const TotalProfit = (props) => (
           >
             <AttachMoneyIcon />
           </Avatar>
+          
         </Grid>
       </Grid>
+      <Box  
+        onClick={() => router.push('/publicite')}
+        sx={{
+          cursor: "pointer",
+          alignItems: 'center',
+          display: 'flex',
+          pt: 2
+        }}
+      >
+        <AddIcon color="success" />
+       
+        <Typography
+       
+          color="textSecondary"
+          variant="caption"
+        >
+        Souscrire a une publicite
+        </Typography>
+      </Box>
     </CardContent>
   </Card>
-);
+)};

@@ -4,11 +4,12 @@ import {Grid, Divider, Typography, Container, Box} from "@mui/material"
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import { CardActionArea } from '@mui/material';
-// import {article } from './Actions'
 import Router from 'next/router'
 import Skeleton from '@mui/material/Skeleton';
+import ReactPaginate from 'react-paginate';
 import {articles} from "../../mock/imgesApi"
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 const url = "https://newsapi.org/v2/everything"
@@ -34,7 +35,7 @@ React.useEffect(() => {
 }, []);
   return (
       <Container sx={{mt: 15}}>
-      
+       
         {/* <Grid container spacing={2} sx={{mt:5}}> */}
       {/* {myArticle.map((item, index)=>( */}
       {(loading ? Array.from(new Array(3)) : articles).map((item, index) => (

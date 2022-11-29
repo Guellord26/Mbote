@@ -37,7 +37,7 @@ import {
         <Box sx={{ m: 1 }}>
           
           <Button
-            style={{backgroundColor: 'black'}}
+            style={{backgroundColor: '#212121'}}
             variant="contained"
             onClick={() => router.push('/editor')}
           >

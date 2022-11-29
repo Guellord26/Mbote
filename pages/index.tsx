@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Box, Grid, Container} from "@mui/material"
+import {Box, Grid, Container, Typography} from "@mui/material"
 import { TotalCustomers } from '../src/Components/Statistiques/total-customers';
 import { TotalProfit } from '../src/Components/Statistiques/total-profit';
 import { TrafficByDevice } from '../src/Components/Statistiques/traffic-by-device';
@@ -12,14 +12,25 @@ export default function  Mbote () {
  
     return (
       <>
+       <Box
+              sx={{
+                // p: 1,
+                textAlign: 'center'
+              }}
+            >
+               <h1 className="text-2xl">
+                NOM DU MEDIA
+              </h1>
+        </Box>
  <Box
       component="main"
       sx={{
         flexGrow: 1,
-        py: 8
+        py: 4
       }}
     >
       <Container maxWidth={false}>
+     
         <Grid
           container
           spacing={3}

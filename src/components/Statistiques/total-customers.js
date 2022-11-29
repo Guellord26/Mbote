@@ -16,7 +16,7 @@ export const TotalCustomers = (props) => (
             gutterBottom
             variant="overline"
           >
-            TOTAL DES VUES
+            TOTAL DES LECTURES
           </Typography>
           <Typography
             color="textPrimary"

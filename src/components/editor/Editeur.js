@@ -29,6 +29,35 @@ export const Editeur = () => (
      <Typography color="textPrimary" variant="h4">
         EDITEUR
      </Typography>
+     <form className="group relative">
+          <div>
+          <input
+            type="text"
+            aria-label="Filter projects"
+            placeholder="Titre article"
+            className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-96 text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-10 ring-1 ring-slate-200 shadow-sm"
+          />
+          </div>
+         <div>
+         <input
+            type="text"
+            aria-label="Filter projects"
+            placeholder="Description"
+            className="mt-5 fomt-5 cus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-96 text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-10 ring-1 ring-slate-200 shadow-sm"
+          />
+         </div>
+          {/* <select className="form-select px-4 py-3 rounded-full">
+            <!-- ... -->
+          </select> */}
+          <div>
+          <input
+            type="text"
+            aria-label="Filter projects"
+            placeholder="Auteur"
+            className="mt-5 mb-5 focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-96 text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-10 ring-1 ring-slate-200 shadow-sm"
+          />
+          </div>
+        </form>
 <Box sx={{ mb: 3, p: 1, border: "1px solid grey", borderRadius: "5px" }}>
   <Editor
     wrapperClassName="demo-wrapper"

@@ -89,7 +89,7 @@ const Login = () => {
                 xs={12}
                 md={6}
               >
-                <Button
+                {/* <Button
                   style={{backgroundColor:'blue'}}
                   fullWidth
                   startIcon={<FacebookIcon />}
@@ -98,14 +98,14 @@ const Login = () => {
                   variant="contained"
                 >
                   Facebook
-                </Button>
+                </Button> */}
               </Grid>
               <Grid
                 item
                 xs={12}
                 md={6}
               >
-                <Button
+                {/* <Button
                   fullWidth
                   style={{backgroundColor:'red'}}
                   startIcon={<GoogleIcon />}
@@ -114,7 +114,7 @@ const Login = () => {
                   variant="contained"
                 >
                   Google
-                </Button>
+                </Button> */}
               </Grid>
             </Grid>
             <Box
@@ -175,7 +175,7 @@ const Login = () => {
             >
               Vous n avais pas de compte?
               {' '}
-              <NextLink
+              {/* <NextLink
                 href="/register"
               >
                 <Link
@@ -188,7 +188,7 @@ const Login = () => {
                 >
                   Créer un ici
                 </Link>
-              </NextLink>
+              </NextLink> */}
             </Typography>
           </form>
         </Container>

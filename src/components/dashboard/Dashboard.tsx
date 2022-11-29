@@ -17,14 +17,19 @@ const items = [
       title: 'Dashboard'
     },
     // {
-    //   href: '/customers',
-    //   icon: (<UsersIcon fontSize="small" />),
-    //   title: 'Customers'
+    //   href: '/Test',
+    //   icon: (<UserAddIcon fontSize="small" />),
+    //   title: 'Test'
     // },
     {
       href: '/articles',
       icon: (<ShoppingBagIcon fontSize="small" />),
       title: 'Articles'
+    },
+    {
+      href: '/publicite',
+      icon: (<UserAddIcon fontSize="small" />),
+      title: 'Publicite'
     },
     // {
     //   href: '/account',
@@ -126,8 +131,9 @@ export default function Dashboard(props) {
           anchor="left"
           PaperProps={{
             sx: {
-              backgroundColor: '#212121',
-              color: '#FFFFFF',
+              // backgroundColor: '#212121',
+              backgroundColor: '#ffffff',
+              color: '#212121',
               width: 280
             }
           }}

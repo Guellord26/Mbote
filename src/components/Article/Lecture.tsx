@@ -3,11 +3,16 @@ import { useRouter } from "next/router";
 import { useNavigate, createSearchParams } from "react-router-dom";
 import { LoremIpsum } from 'react-lorem-ipsum';
 import { articles } from "../../mock/imgesApi";
+import { Box, Container} from '@mui/material';
 import { loadComponents } from "next/dist/server/load-components";
+import { publicites } from "../../../src/mock/PubApis"
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 const url = "https://newsapi.org/v2/everything";
 
 export default function Lecture() {
+  
   const [loading, setLoading] = React.useState(true);
   const [myArticle, setMyArticle] = React.useState([]);
 
@@ -32,8 +37,8 @@ export default function Lecture() {
    }
 
   return (
-    <>
-      <div className="2xl:mx-auto 2xl:container xl:px-20 lg:px-10 px-6 py-20">
+    <Container>
+      <div className="2xl:mx-auto xl:px-20 lg:px-10 px-6 py-2  rounded-lg bg-white p-8">
         <div className="lg:flex justify-center">
           {/* ======================================================= */}
           <div className="2xl:w-7/12 lg:w-8/12 md:w-10/12">
@@ -57,7 +62,7 @@ export default function Lecture() {
                           </p>
                         </div>
                         <div className="flex items-center">
-                          <svg
+                          {/* <svg
                             width={64}
                             height={2}
                             viewBox="0 0 64 2"
@@ -65,8 +70,16 @@ export default function Lecture() {
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path d="M64 1H0" stroke="#6B7280" />
-                          </svg>
-                          {/* <p className="text-base leading-none text-gray-500 ml-2">{item.author}</p> */}
+                          </svg> */}
+                          <p className="text-base leading-none text-gray-500 ml-2">
+                          <a href="https://www.facebook.com/share.php?u=your_page_link.com" target="_blank">
+                             <FacebookIcon /> Facebook
+                          </a> {'  '}
+                          <a href="https://www.facebook.com/share.php?u=your_page_link.com" target="_blank">
+                             <TwitterIcon /> TwitterIcon
+                          </a>
+                          </p>
+                          
                         </div>
                       </div>
                       <h1 className="lg:text-3xl text-2xl font-semibold mt-4 text-gray-800">
@@ -86,9 +99,9 @@ export default function Lecture() {
             ))}
           </div>
           {/* ======================================================= */}
-          <div className="lg:ml-6 lg:mt-0 mt-7 2xl:w-3/12 lg:w-4/12 w-full flex lg:flex-col sm:flex-row flex-col items-center justify-between">
-            {articles.map((item, index) => (
-              <div  onClick={() => lecture(item.id)} key={index} style={{marginBottom: "25px"}} >
+          <div className="lg:ml-6 2xl:w-3/12 lg:w-4/12 w-full flex lg:flex-col sm:flex-row flex-col items-center">
+            {publicites.map((item, index) => (
+              <div key={index} style={{marginBottom: "10px"}} >
                 {idArticle != item.id && (
                   <div className="lg:w-auto sm:w-1/2">
                     <img
@@ -96,38 +109,6 @@ export default function Lecture() {
                       alt="flying letters"
                       className="w-full"
                     />
-                    <div className="mt-4">
-                      <div className="flex items-center justify-between">
-                        {/* <div className="flex items-center">
-                          <p className="text-base leading-4 text-gray-500">
-                            5 feb
-                          </p>
-                          <p className="text-base leading-none text-gray-500 ml-12">
-                            5 min read
-                          </p>
-                        </div> */}
-                        <div className="flex items-center">
-                          <svg
-                            width={64}
-                            height={2}
-                            viewBox="0 0 64 2"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path d="M64 1H0" stroke="#6B7280" />
-                          </svg>
-                          {/* <p className="text-base leading-none text-gray-500 ml-2">
-                            Jeff Bill
-                          </p> */}
-                        </div>
-                      </div>
-                      <h5 className="text-2xl  leading-6 mt-4 text-gray-800">
-                        {item.title}
-                      </h5>
-                      <p className="text-base leading-6 text-gray-600 mt-2">
-                        {item.description}
-                      </p>
-                    </div>
                   </div>
                 )}
               </div>
@@ -136,6 +117,6 @@ export default function Lecture() {
           </div>
         </div>
       </div>
-    </>
+    </Container>
   );
 }

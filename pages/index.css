@@ -3,8 +3,24 @@
 @tailwind utilities;
 
 /* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap'); */
-
-
+.bg-white	{
+  background-color: rgb(255 255 255);
+}
+.bg-blue-200{
+  	background-color: rgb(191 219 254);
+}
+.mr-4 {
+  margin-left: 1rem; 
+}
+.p-8 {
+  padding: 2rem; 
+} 
+.rounded-lg {
+  border-radius: 0.5rem; 
+} 
+.rounded-xl {
+  border-radius: 0.75rem;  
+}  
 .head-text {
     position: relative;
  }
@@ -17,3 +33,78 @@
  /* .FontJosefin {
    font-family: 'Josefin Sans', sans-serif;
  } */
+ /* .item must be first */
+.item {
+  align-items: center;
+  color: #FFF;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  height: 25px;
+  justify-content: center;
+  width: 40px;
+}
+
+.disabled-page {
+  color: #808e9b;
+}
+
+.active {
+  border: solid 1px #808e9b;
+  border-radius: 30px;
+  color: #808e9b;
+}
+
+.break-me {
+}
+
+.next {
+  border-left: solid 1px #808e9b;
+  font-size: 4px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  width: 150px;
+}
+
+.pagination {
+  align-items: center;
+  background-color: #212121;
+  display: flex;
+  flex-direction: row;
+  height: 30px; 
+  border-radius: '5px';
+  justify-content: center;
+  list-style-type: none;
+  position: relative;
+  width: 500px;
+}
+
+.pagination-page {
+  font-weight: 700;
+}
+
+.previous {
+  border-right: solid 1px #808e9b;
+  font-size: 4px;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  width: 150px;
+}
+
+/* Divider */
+.divide-y { border-top-width: 0.5px; }
+.divide-slate-500 {
+  border-color: rgb(100 116 139);
+}
+/* font-family */
+.font-sans {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.font-serif{
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+.font-mono{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
