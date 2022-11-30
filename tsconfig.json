@@ -23,6 +23,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/**/*" ],
-"exclude": ["node_modules", "src/**/*.spec.ts"]
+, "src/Components/NewBanner", "src/__mock__/imgesApi.js", "Mbote/src/Components/Article/Lecture.js", "Mbote/pages/read_article.js"  ],
+"exclude": [
+  "node_modules"
+]
 }
