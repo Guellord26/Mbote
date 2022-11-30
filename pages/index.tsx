@@ -6,111 +6,15 @@ import { TrafficByDevice } from '../src/components/statistiques/traffic-by-devic
 import { Budget } from '../src/components/statistiques/budget';
 import { Sales } from '../src/components/statistiques/sales';
 import { DashboardLayout } from '../src/components/dashboard/dashboard-layout';
+import PageView from '../src/components/statistiques/page_view'
 
 
 export default function  Mbote () {
  
     return (
       <>
-       <Box
-              sx={{
-                // p: 1,
-                textAlign: 'center'
-              }}
-            >
-               <h1 className="text-2xl">
-                NOM DU MEDIA
-              </h1>
-        </Box>
- <Box
-      component="main"
-      sx={{
-        flexGrow: 1,
-        py: 4
-      }}
-    >
-      <Container maxWidth={false}>
-     
-        <Grid
-          container
-          spacing={3}
-        >
-          <Grid
-            item
-            lg={4}
-            sm={6}
-            xl={3}
-            xs={12}
-          >
-            <Budget />
-          </Grid>
-          <Grid
-            item
-            xl={3}
-            lg={4}
-            sm={6}
-            xs={12}
-          >
-            <TotalCustomers />
-          </Grid>
-          {/* <Grid
-            item
-            xl={3}
-            lg={3}
-            sm={6}
-            xs={12}
-          >
-            <TasksProgress />
-          </Grid> */}
-          <Grid
-            item
-            xl={3}
-            lg={4}
-            sm={6}
-            xs={12}
-          >
-            <TotalProfit sx={{ height: '100%' }} />
-          </Grid>
-          <Grid
-            item
-            lg={8}
-            md={12}
-            xl={9}
-            xs={12}
-          >
-            <Sales />
-          </Grid>
-          <Grid
-            item
-            lg={4}
-            md={6}
-            xl={3}
-            xs={12}
-          >
-            <TrafficByDevice />
-          </Grid>
-          {/* <Grid
-            item
-            lg={4}
-            md={6}
-            xl={3}
-            xs={12}
-          >
-            <LatestProducts sx={{ height: '100%' }} />
-          </Grid>
-          <Grid
-            item
-            lg={8}
-            md={12}
-            xl={9}
-            xs={12}
-          >
-            <LatestOrders />
-          </Grid> */}
-        </Grid>
-      </Container>
-    </Box>
-        </>
+       <PageView />
+      </>
     )
 }
 
