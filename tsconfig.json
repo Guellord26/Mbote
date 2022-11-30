@@ -19,13 +19,7 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-, "src/Components/NewBanner", "src/__mock__/imgesApi.js", "src/Components/Dashboard/dashboard-layout"],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "src/**/*.spec.ts"]
   
 }
