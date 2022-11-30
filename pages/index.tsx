@@ -10,10 +10,17 @@ import { Chart as ChartJS, LineController, BarElement, LineElement, PointElement
 
 ChartJS.register(LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title);
 // ======================
-
+import { Avatar } from '@mui/material';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import MoneyIcon from '@mui/icons-material/Money';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import { useRouter } from 'next/router';
+import AddIcon from '@mui/icons-material/Add';
 export default function  Mbote () {
 
-  
+  const router = useRouter()
   const theme = useTheme();
 
   const data = {
@@ -124,6 +131,53 @@ export default function  Mbote () {
             xs={12}
           >
             {/* <Budget /> */}
+            <Card
+    sx={{ height: '100%' }}
+    
+  >
+    <CardContent>
+      <Grid
+        container
+        spacing={3}
+        sx={{ justifyContent: 'space-between' }}
+      >
+        <Grid item>
+          <Typography
+            color="textSecondary"
+            gutterBottom
+            variant="overline"
+          >
+            ARTICLES PUBLIER
+          </Typography>
+          <Typography
+            color="textPrimary"
+            variant="h4"
+          >
+            50
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Avatar
+            sx={{
+              backgroundColor: 'error.main',
+              height: 56,
+              width: 56
+            }}
+          >
+            <MoneyIcon />
+          </Avatar>
+        </Grid>
+      </Grid>
+      <Box
+        sx={{
+          pt: 2,
+          display: 'flex',
+          alignItems: 'center'
+        }}
+      >
+      </Box>
+    </CardContent>
+  </Card>
           </Grid>
           <Grid
             item
@@ -133,6 +187,65 @@ export default function  Mbote () {
             xs={12}
           >
             {/* <TotalCustomers /> */}
+            <Card>
+    <CardContent>
+      <Grid
+        container
+        spacing={3}
+        sx={{ justifyContent: 'space-between' }}
+      >
+        <Grid item>
+          <Typography
+            color="textSecondary"
+            gutterBottom
+            variant="overline"
+          >
+            TOTAL DES LECTURES
+          </Typography>
+          <Typography
+            color="textPrimary"
+            variant="h4"
+          >
+            1,6k
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Avatar
+            sx={{
+              backgroundColor: 'success.main',
+              height: 56,
+              width: 56
+            }}
+          >
+            <VisibilityIcon  />
+          </Avatar>
+        </Grid>
+      </Grid>
+      <Box
+        sx={{
+          alignItems: 'center',
+          display: 'flex',
+          pt: 2
+        }}
+      >
+        <ArrowUpwardIcon color="success" />
+        <Typography
+          variant="body2"
+          sx={{
+            mr: 1
+          }}
+        >
+          16%
+        </Typography>
+        <Typography
+          color="textSecondary"
+          variant="caption"
+        >
+        Depuis le mois dernier
+        </Typography>
+      </Box>
+    </CardContent>
+  </Card>
           </Grid>
           {/* <Grid
             item
@@ -151,6 +264,63 @@ export default function  Mbote () {
             xs={12}
           >
             {/* <TotalProfit sx={{ height: '100%' }} /> */}
+            <Card>
+    <CardContent>
+      <Grid
+        container
+        spacing={3}
+        sx={{ justifyContent: 'space-between' }}
+      >
+        <Grid item>
+          <Typography
+            color="textSecondary"
+            gutterBottom
+            variant="overline"
+          >
+            REVENU PUBLICITAIRE
+          </Typography>
+
+          <Typography
+            color="textPrimary"
+            variant="h4"
+          >
+            $23k
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Avatar
+            sx={{
+              backgroundColor: 'primary.main',
+              height: 56,
+              width: 56
+            }}
+          >
+            <AttachMoneyIcon />
+          </Avatar>
+          
+        </Grid>
+      </Grid>
+      <Box  
+        onClick={() => router.push('/publicite')}
+        sx={{
+          cursor: "pointer",
+          alignItems: 'center',
+          display: 'flex',
+          pt: 2
+        }}
+      >
+        <AddIcon color="success" />
+       
+        <Typography
+       
+          color="textSecondary"
+          variant="caption"
+        >
+        Souscrire a une publicite
+        </Typography>
+      </Box>
+    </CardContent>
+  </Card>
           </Grid>
           <Grid
             item
@@ -160,7 +330,7 @@ export default function  Mbote () {
             xs={12}
           >
             {/* <Sales /> */}
-            <Card>
+            {/* <Card>
       <CardHeader
         
         title="Statistique des visite sur le media"
@@ -179,7 +349,7 @@ export default function  Mbote () {
        
       </CardContent>
      
-    </Card>
+    </Card> */}
           </Grid>
           <Grid
             item
