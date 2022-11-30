@@ -13,8 +13,8 @@ import {
 import { articles } from "../src/mock/imgesApi";
 // import { ArticleListToolbar } from "../src/Components/Article/article-list-toolbar";
 import { useRouter } from 'next/router';
-import { DashboardLayout } from "../src/Components/Dashboard/dashboard-layout";
-import { PaginatedItems } from "../src/Components/Pagnations/Pagination";
+import { DashboardLayout } from "../src/components/dashboard/dashboard-layout";
+import { PaginatedItems } from "../src/components/pagnations/pagination";
 import Image from "next/image";
 
 const itemsPerPage = 4;
