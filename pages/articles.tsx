@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { articles } from "../src/mock/imgesApi";
 // import { ArticleListToolbar } from "../src/components/article/article-list-toolbar";
-import { ArticleCard } from "../src/components/article/article-card";
+// import { ArticleCard } from "../src/components/article/article-card";
 import { DashboardLayout } from "../src/components/dashboard/dashboard-layout";
 // import { PaginatedItems } from "../src/components/pagnations/pagination";
 import Image from "next/image";
