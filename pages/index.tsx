@@ -410,7 +410,7 @@ export default function  Mbote () {
         >
          
            {/* <Chart type='line' data={dataBar} /> */}
-           <Bar data={dataBar} />
+           {/* <Bar data={dataBar} /> */}
         </Box>
        
       </CardContent>
