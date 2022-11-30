@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Box, Container, Grid, Pagination, Divider, Button } from '@mui/material';
 import { DashboardLayout } from '../src/components/dashboard/dashboard-layout';
-import {Lecture} from '../src/components/article/lecture'
+import {Lecture} from '../src/Components/Article/lecture'
 
 
 function ReadArticle(){
