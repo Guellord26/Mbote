@@ -70,14 +70,14 @@ export function Lecture() {
                           >
                             <path d="M64 1H0" stroke="#6B7280" />
                           </svg> */}
-                          {/* <p className="text-base leading-none text-gray-500 ml-2">
-                          <a href="https://www.facebook.com/share.php?u=your_page_link.com" target="_blank">
+                          <p className="text-base leading-none text-gray-500 ml-2">
+                          <a href="#">
                              <FacebookIcon /> Facebook
                           </a> {'  '}
-                          <a href="https://www.facebook.com/share.php?u=your_page_link.com" target="_blank">
+                          <a href="#">
                              <TwitterIcon /> TwitterIcon
                           </a>
-                          </p> */}
+                          </p>
                           
                         </div>
                       </div>

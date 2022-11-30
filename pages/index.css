@@ -6,11 +6,17 @@
 .bg-white	{
   background-color: rgb(255 255 255);
 }
+.bg-amber-100{
+  background-color: rgb(254 243 199);
+}
 .bg-blue-200{
   	background-color: rgb(191 219 254);
 }
 .mr-4 {
   margin-left: 1rem; 
+}
+.mb-32 {
+  margin-bottom: 8rem;
 }
 .p-8 {
   padding: 2rem; 
