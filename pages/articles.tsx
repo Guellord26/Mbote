@@ -14,7 +14,7 @@ import { articles } from "../src/mock/imgesApi";
 // import { ArticleListToolbar } from "../src/Components/Article/article-list-toolbar";
 import { useRouter } from 'next/router';
 import { DashboardLayout } from "../src/components/dashboard/dashboard-layout";
-import { PaginatedItems } from "../src/components/pagnations/pagination";
+// import { PaginatedItems } from "../src/components/pagnations/pagination";
 import Image from "next/image";
 
 const itemsPerPage = 4;
@@ -164,11 +164,11 @@ const Article = () => {
               pt: 3,
             }}
           >
-            <PaginatedItems
+            {/* <PaginatedItems
               pageCount={pageCount}
               handlePageClick={handlePageClick}
             />
-          </Box>
+          </Box> */}
         </div>
       </Container>
     </>
