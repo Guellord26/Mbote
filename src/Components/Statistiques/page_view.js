@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Box, Grid, Container, Typography} from "@mui/material"
+import {Box, Grid, Container } from "@mui/material"
 import { TotalCustomers } from './total-customers';
 import { TotalProfit } from './total-profit';
 import { TrafficByDevice } from './traffic-by-device';
@@ -8,7 +8,7 @@ import { Sales } from './sales';
 
 
 
-export default function  PageView() {
+export function  PageView() {
  
     return (
       <>
