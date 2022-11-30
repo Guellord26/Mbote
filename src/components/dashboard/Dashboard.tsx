@@ -16,11 +16,11 @@ const items = [
       icon: (<ChartBarIcon fontSize="small" />),
       title: 'Dashboard'
     },
-    // {
-    //   href: '/Test',
-    //   icon: (<UserAddIcon fontSize="small" />),
-    //   title: 'Test'
-    // },
+    {
+      href: '/editor',
+      icon: (<UserAddIcon fontSize="small" />),
+      title: 'Editeur'
+    },
     {
       href: '/articles',
       icon: (<ShoppingBagIcon fontSize="small" />),
@@ -31,11 +31,11 @@ const items = [
       icon: (<UserAddIcon fontSize="small" />),
       title: 'Publicite'
     },
-    {
-      href: '/editor',
-      icon: "",
-      title: 'Editeur'
-    },
+    // {
+    //   href: '/account',
+    //   icon: (<UserIcon fontSize="small" />),
+    //   title: 'Account'
+    // },
     // {
     //   href: '/settings',
     //   icon: (<CogIcon fontSize="small" />),
@@ -86,7 +86,7 @@ export default function Dashboard(props) {
                     /> */}
                     {/* <img style={{height: 42, width: 100}} src="../../public/images/logo.PNG" alt="logo" /> */}
                     <Image
-                        src="/images/logo.png"
+                        src="/images/logo.PNG"
                         alt="logo"
                         width={350}
                         height={90}

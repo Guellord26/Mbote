@@ -2,7 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Box, Container} from '@mui/material';
 import LoadingButton from '@mui/lab/LoadingButton';
-import { DashboardLayout } from '../src/components/dashboard/dashboard-layout';
+import { DashboardLayout } from '../src/Components/Dashboard/dashboard-layout';
 import {publicites} from "../src/mock/PubApis"
 
 function Publicite(){

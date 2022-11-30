@@ -68,7 +68,7 @@ export const Editeur = () => (
           />
           </div>
         </form>
-<Box sx={{ mb: 3, p: 1, border: "1px solid grey", borderRadius: "5px" }}>
+<Box sx={{ mb: 3, p: 1, border: "1px solid grey", borderRadius: "5px", backgroundColor: '#ffffff'}}>
   <Editor
     wrapperClassName="demo-wrapper"
     editorClassName="demo-editor"

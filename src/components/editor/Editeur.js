@@ -1,7 +1,14 @@
 import React from 'react';
-import { Editor } from 'react-draft-wysiwyg';
+// import { Editor } from 'react-draft-wysiwyg';
+import dynamic from 'next/dynamic'; 
+import { EditorState } from "draft-js";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import {Box, Container, Button, Typography} from "@mui/material";
+
+const Editor = dynamic(
+  () => import('react-draft-wysiwyg').then(mod => mod.Editor),
+  { ssr: false }
+)
 
 function uploadImageCallBack(file) {
   return new Promise(
@@ -43,7 +50,7 @@ export const Editeur = () => (
             type="text"
             aria-label="Filter projects"
             placeholder="Description"
-            className="mt-5 fomt-5 cus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-96 text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-10 ring-1 ring-slate-200 shadow-sm"
+            className="mt-5fomt-5 cus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-96 text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 pl-10 ring-1 ring-slate-200 shadow-sm"
           />
          </div>
           {/* <select className="form-select px-4 py-3 rounded-full">
