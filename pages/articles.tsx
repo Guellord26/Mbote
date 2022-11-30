@@ -11,14 +11,15 @@ import {
   Typography,
 } from "@mui/material";
 import { articles } from "../src/mock/imgesApi";
-// import { ArticleListToolbar } from "../src/components/article/article-list-toolbar";
-// import { ArticleCard } from "../src/components/article/article-card";
-import { DashboardLayout } from "../src/components/dashboard/dashboard-layout";
-// import { PaginatedItems } from "../src/components/pagnations/pagination";
+// import { ArticleListToolbar } from "../src/Components/Article/article-list-toolbar";
+import { useRouter } from 'next/router';
+import { DashboardLayout } from "../src/Components/Dashboard/dashboard-layout";
+import { PaginatedItems } from "../src/Components/Pagnations/Pagination";
 import Image from "next/image";
 
 const itemsPerPage = 4;
 const Article = () => {
+  const router = useRouter()
   // const [article, setArticle] = React.useState([])
   const [itemOffset, setItemOffset] = React.useState(0);
 
@@ -50,6 +51,34 @@ const Article = () => {
       <Container>
         <div className="">
           {/* <ArticleListToolbar /> */}
+          <Box
+        sx={{
+          alignItems: 'center',
+          display: 'flex',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          m: -1
+        }}
+      >
+        <Typography
+          sx={{ m: 1 }}
+          variant="h4"
+        >
+          Articles
+        </Typography>
+        <Box sx={{ m: 1 }}>
+          
+          <Button
+            style={{backgroundColor: '#212121'}}
+            variant="contained"
+            onClick={() => router.push('/editor')}
+          >
+            Ajouter Articles
+          </Button>
+          
+            
+        </Box>
+      </Box>
         </div>
 
         <Divider />
@@ -135,10 +164,10 @@ const Article = () => {
               pt: 3,
             }}
           >
-            {/* <PaginatedItems
+            <PaginatedItems
               pageCount={pageCount}
               handlePageClick={handlePageClick}
-            /> */}
+            />
           </Box>
         </div>
       </Container>
