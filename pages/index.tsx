@@ -8,14 +8,16 @@ import { Chart } from 'react-chartjs-2';
 // ChartJS.register(...registerables);
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title } from 'chart.js';
 
-ChartJS.register(LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title);
+ChartJS.register(ArcElement, Tooltip, Legend, LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title);
 // ======================
 import PhoneIcon from '@mui/icons-material/Phone';
 import TabletIcon from '@mui/icons-material/Tablet';
 // import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
-
-ChartJS.register(ArcElement, Tooltip, Legend);
+import LaptopMacIcon from '@mui/icons-material/LaptopMac';
+import PhoneIcon from '@mui/icons-material/Phone';
+import TabletIcon from '@mui/icons-material/Tablet';
+// ChartJS.register(ArcElement, Tooltip, Legend);
 import { Avatar } from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import VisibilityIcon from '@mui/icons-material/Visibility';
@@ -77,18 +79,18 @@ export default function  Mbote () {
     labels: ['PC', 'Tablet', 'Mobile']
   });
   
-  React.useEffect(() => {
-    const chart = chartRef.current;
+  // React.useEffect(() => {
+  //   const chart = chartRef.current;
   
-    if (chart) {
-      setChartData({
-        datasets: [{
-            backgroundColor: createBackgroundGradient(chart.ctx),
-            // ...
-        }]
-      });
-    }
-  }, []);
+  //   if (chart) {
+  //     setChartData({
+  //       datasets: [{
+  //           backgroundColor: createBackgroundGradient(chart.ctx),
+  //           // ...
+  //       }]
+  //     });
+  //   }
+  // }, []);
   // =============================
 
   const dataBar = {
