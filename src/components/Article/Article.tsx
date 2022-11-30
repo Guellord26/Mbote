@@ -21,7 +21,7 @@ function Article () {
 
  const lecture = (id) => {
   Router.push({
-    pathname: '/readArticle',
+    pathname: '/read_article',
     query: { id: id },
 })
  }
