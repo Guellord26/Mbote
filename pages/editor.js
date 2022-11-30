@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Box, Container } from '@mui/material';
 import { Editeur } from'../src/components/editor/Editeur';
-import { DashboardLayout } from '../src/components/Dashboard/dashboard-layout';
+import { DashboardLayout } from '../src/components/dashboard/dashboard-layout';
 import React, { useEffect } from "react";
 
 
