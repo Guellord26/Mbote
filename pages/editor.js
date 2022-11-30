@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Box, Container } from '@mui/material';
-import { Editeur } from'../src/components/editor/editeur';
+// import { Editeur } from'../src/components/editor/editeur';
 import { DashboardLayout } from '../src/components/dashboard/dashboard-layout';
 import React, { useEffect } from "react";
 
@@ -19,7 +19,7 @@ const Editor = () => (
         py: 8
       }}
     >
-<Editeur />
+{/* <Editeur /> */}
     </Box>
   </>
 );
