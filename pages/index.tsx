@@ -78,7 +78,7 @@ export default function  Mbote () {
             xl={9}
             xs={12}
           >
-            <Sales />
+            {/* <Sales /> */}
           </Grid>
           <Grid
             item
