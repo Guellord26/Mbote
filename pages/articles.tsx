@@ -11,10 +11,10 @@ import {
   Typography,
 } from "@mui/material";
 import { articles } from "../src/mock/imgesApi";
-// import { ArticleListToolbar } from "../src/Components/Article/article-list-toolbar";
-// import { ArticleCard } from "../src/Components/Article/article-card";
+import { ArticleListToolbar } from "../src/components/article/article-list-toolbar";
+import { ArticleCard } from "../src/components/article/article-card";
 import { DashboardLayout } from "../src/components/dashboard/dashboard-layout";
-import { PaginatedItems } from "../src/components/pagnations/Pagination";
+import { PaginatedItems } from "../src/components/pagnations/pagination";
 import Image from "next/image";
 
 const itemsPerPage = 4;
@@ -49,7 +49,7 @@ const Article = () => {
       </Head>
       <Container>
         <div className="">
-          {/* <ArticleListToolbar /> */}
+          <ArticleListToolbar />
         </div>
 
         <Divider />
