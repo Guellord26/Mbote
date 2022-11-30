@@ -167,8 +167,8 @@ const Article = () => {
             {/* <PaginatedItems
               pageCount={pageCount}
               handlePageClick={handlePageClick}
-            />
-          </Box> */}
+            /> */}
+          </Box>
         </div>
       </Container>
     </>
