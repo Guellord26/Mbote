@@ -4,11 +4,11 @@ import { DashboardLayout } from '../src/components/dashboard/dashboard-layout';
 // ======================
 import {Card, CardContent, CardHeader, Divider, useTheme } from '@mui/material';
 import { Chart } from 'react-chartjs-2';
-import { Chart as ChartJS, registerables } from 'chart.js';
-ChartJS.register(...registerables);
-// import { Chart as ChartJS, LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title } from 'chart.js';
+// import { Chart as ChartJS, registerables } from 'chart.js';
+// ChartJS.register(...registerables);
+import { Chart as ChartJS, LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title } from 'chart.js';
 
-// ChartJS.register(LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title);
+ChartJS.register(LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title);
 // ======================
 
 export default function  Mbote () {
