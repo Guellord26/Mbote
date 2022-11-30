@@ -4,14 +4,14 @@ import { DashboardLayout } from '../src/components/dashboard/dashboard-layout';
 // ======================
 import {Card, CardContent, CardHeader, Divider, useTheme } from '@mui/material';
 import { Chart } from 'react-chartjs-2';
-
+import { Doughnut, Bar} from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend, LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title);
 // ======================
 import PhoneIcon from '@mui/icons-material/Phone';
 import TabletIcon from '@mui/icons-material/Tablet';
-import { Doughnut } from 'react-chartjs-2';
+
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import { Avatar } from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
@@ -395,7 +395,7 @@ export default function  Mbote () {
             xs={12}
           >
             {/* <Sales /> */}
-            {/* <Card>
+            <Card>
       <CardHeader
         
         title="Statistique des visite sur le media"
@@ -409,12 +409,13 @@ export default function  Mbote () {
           }}
         >
          
-           <Chart type='bar' data={dataBar} />
+           {/* <Chart type='line' data={dataBar} /> */}
+           <Bar data={dataBar} />
         </Box>
        
       </CardContent>
      
-    </Card> */}
+    </Card>
           </Grid>
           <Grid
             item
