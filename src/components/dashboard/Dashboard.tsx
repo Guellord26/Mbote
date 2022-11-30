@@ -31,11 +31,11 @@ const items = [
       icon: (<UserAddIcon fontSize="small" />),
       title: 'Publicite'
     },
-    // {
-    //   href: '/account',
-    //   icon: (<UserIcon fontSize="small" />),
-    //   title: 'Account'
-    // },
+    {
+      href: '/editor',
+      icon: "",
+      title: 'Editeur'
+    },
     // {
     //   href: '/settings',
     //   icon: (<CogIcon fontSize="small" />),
@@ -86,7 +86,7 @@ export default function Dashboard(props) {
                     /> */}
                     {/* <img style={{height: 42, width: 100}} src="../../public/images/logo.PNG" alt="logo" /> */}
                     <Image
-                        src="/images/logo.PNG"
+                        src="/images/logo.png"
                         alt="logo"
                         width={350}
                         height={90}
