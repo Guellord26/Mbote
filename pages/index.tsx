@@ -5,7 +5,7 @@ import {Box, Grid, Container, Typography} from "@mui/material"
 // import { TrafficByDevice } from '../src/Components/Statistiques/traffic-by-device';
 // import { Budget } from '../src/Components/Statistiques/budget';
 // import { Sales } from '../src/Components/Statistiques/sales';
-import { DashboardLayout } from '../src/Components/Dashboard/dashboard-layout';
+import { DashboardLayout } from '../src/Components/dashboard/dashboard-layout';
 
 
 export default function  Mbote () {
