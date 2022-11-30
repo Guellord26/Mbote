@@ -4,7 +4,6 @@ import { useNavigate, createSearchParams } from "react-router-dom";
 import { LoremIpsum } from 'react-lorem-ipsum';
 import { articles } from "../../mock/imgesApi";
 import { Box, Container} from '@mui/material';
-import { loadComponents } from "next/dist/server/load-components";
 import { publicites } from "../../mock/PubApis"
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
