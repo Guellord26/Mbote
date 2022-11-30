@@ -3,8 +3,8 @@ import {Box, Grid, Container, Typography} from "@mui/material"
 import { DashboardLayout } from '../src/components/dashboard/dashboard-layout';
 // ======================
 import {Card, CardContent, CardHeader, Divider, useTheme } from '@mui/material';
-import { Chart } from 'react-chartjs-2';
-import { Doughnut, Bar} from 'react-chartjs-2';
+import { Chart, Bar} from 'react-chartjs-2';
+import { Doughnut} from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend, LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title);
@@ -96,7 +96,7 @@ export default function  Mbote () {
         barThickness: 12,
         borderRadius: 4,
         categoryPercentage: 0.5,
-        data: [18, 5, 19, 27, 29, 19, 20, 25, 22, 28, 40, 33, 29 ],
+        data: [18, 5, 19, 27, 29, 19, 20, 25, 22, 28, 40, 33],
         label: 'Cette année',
         maxBarThickness: 10
       },
@@ -106,7 +106,7 @@ export default function  Mbote () {
         barThickness: 12,
         borderRadius: 4,
         categoryPercentage: 0.5,
-        data: [11, 20, 12, 29, 30, 25, 13, 21, 22, 24, 12, 26, 27],
+        data: [11, 20, 12, 29, 30, 25, 13, 21, 22, 24, 12, 26],
         label: "L'année passée",
         maxBarThickness: 10
       }
