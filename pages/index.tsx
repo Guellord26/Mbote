@@ -42,7 +42,7 @@ export default function  Mbote () {
             xl={3}
             xs={12}
           >
-            {/* <Budget /> */}
+            <Budget />
           </Grid>
           <Grid
             item
@@ -51,7 +51,7 @@ export default function  Mbote () {
             sm={6}
             xs={12}
           >
-            {/* <TotalCustomers /> */}
+            <TotalCustomers />
           </Grid>
           {/* <Grid
             item
@@ -69,7 +69,7 @@ export default function  Mbote () {
             sm={6}
             xs={12}
           >
-            {/* <TotalProfit sx={{ height: '100%' }} /> */}
+            <TotalProfit sx={{ height: '100%' }} />
           </Grid>
           <Grid
             item
@@ -78,7 +78,7 @@ export default function  Mbote () {
             xl={9}
             xs={12}
           >
-            {/* <Sales /> */}
+            <Sales />
           </Grid>
           <Grid
             item
@@ -87,7 +87,7 @@ export default function  Mbote () {
             xl={3}
             xs={12}
           >
-            {/* <TrafficByDevice /> */}
+            <TrafficByDevice />
           </Grid>
           {/* <Grid
             item
