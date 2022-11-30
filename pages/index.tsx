@@ -4,18 +4,15 @@ import { DashboardLayout } from '../src/components/dashboard/dashboard-layout';
 // ======================
 import {Card, CardContent, CardHeader, Divider, useTheme } from '@mui/material';
 import { Chart } from 'react-chartjs-2';
-// import { Chart as ChartJS, registerables } from 'chart.js';
-// ChartJS.register(...registerables);
+
 import { Chart as ChartJS, ArcElement, Tooltip, Legend, LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title } from 'chart.js';
 
 ChartJS.register(ArcElement, Tooltip, Legend, LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title);
 // ======================
 import PhoneIcon from '@mui/icons-material/Phone';
 import TabletIcon from '@mui/icons-material/Tablet';
-// import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-// ChartJS.register(ArcElement, Tooltip, Legend);
 import { Avatar } from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import VisibilityIcon from '@mui/icons-material/Visibility';
