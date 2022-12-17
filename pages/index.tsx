@@ -1,24 +1,87 @@
 import * as React from 'react';
-import {Box, Grid, Container, Typography} from "@mui/material"
-import { TotalCustomers } from '../src/Components/Statistiques/total-customers';
-import { TotalProfit } from '../src/Components/Statistiques/total-profit';
-import { TrafficByDevice } from '../src/Components/Statistiques/traffic-by-device';
-import { Budget } from '../src/Components/Statistiques/budget';
-import { Sales } from '../src/Components/Statistiques/sales';
+import {CardHeader, Avatar, Box, Card, CardContent, Grid, Divider, Typography, useTheme, Container } from '@mui/material';
+import MoneyIcon from '@mui/icons-material/Money';
 import { DashboardLayout } from '../src/Components/Dashboard/dashboard-layout';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import { useRouter } from 'next/router';
+import AddIcon from '@mui/icons-material/Add';
+import LaptopMacIcon from '@mui/icons-material/LaptopMac';
+import PhoneIcon from '@mui/icons-material/Phone';
+import TabletIcon from '@mui/icons-material/Tablet';
+import {Chart, Doughnut } from 'react-chartjs-2';
 // ======================
-import {Card, CardContent, CardHeader, Divider, useTheme } from '@mui/material';
-import { Chart, Bar} from 'react-chartjs-2';
-import { Chart as ChartJS, LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title } from 'chart.js';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title } from 'chart.js';
 
-ChartJS.register(LineController, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title);
+ChartJS.register(LineController, ArcElement, BarElement, Tooltip, Legend, BarElement, LineElement, PointElement, LinearScale, CategoryScale, Title);
 // ======================
 
 export default function  Mbote () {
 
-  
+  const router = useRouter()
   const theme = useTheme();
 
+  const dataDounut = {
+    datasets: [
+      {
+        data: [63, 15, 23],
+        backgroundColor: ['#3F51B5', '#e53935', '#FB8C00'],
+        borderWidth: 8,
+        borderColor: '#FFFFFF',
+        hoverBorderColor: '#FFFFFF'
+      }
+    ],
+    labels: ['PC', 'Tablet', 'Mobile']
+  };
+  
+  const devices = [
+    {
+      title: 'Pc',
+      value: 63,
+      icon: LaptopMacIcon,
+      color: '#3F51B5'
+    },
+    {
+      title: 'Tablet',
+      value: 15,
+      icon: TabletIcon,
+      color: '#E53935'
+    },
+    {
+      title: 'Mobile',
+      value: 23,
+      icon: PhoneIcon,
+      color: '#FB8C00'
+    }
+  ];
+  const chartRef = React.useRef(null);
+  const [chartData, setChartData] = React.useState({
+    datasets: [
+      {
+        data: [63, 15, 22],
+        backgroundColor: ['#3F51B5', '#e53935', '#FB8C00'],
+        borderWidth: 8,
+        borderColor: '#FFFFFF',
+        hoverBorderColor: '#FFFFFF'
+      }
+    ],
+    labels: ['PC', 'Tablet', 'Mobile']
+  });
+  
+  // React.useEffect(() => {
+  //   const chart = chartRef.current;
+  
+  //   if (chart) {
+  //     setChartData({
+  //       datasets: [{
+  //           backgroundColor: createBackgroundGradient(chart.ctx),
+  //           // ...
+  //       }]
+  //     });
+  //   }
+  // }, []);
+// ==========================================
   const data = {
     datasets: [
       {
@@ -127,6 +190,52 @@ export default function  Mbote () {
             xs={12}
           >
             {/* <Budget /> */}
+            <Card
+    sx={{ height: '100%' }}
+  >
+    <CardContent>
+      <Grid
+        container
+        spacing={3}
+        sx={{ justifyContent: 'space-between' }}
+      >
+        <Grid item>
+          <Typography
+            color="textSecondary"
+            gutterBottom
+            variant="overline"
+          >
+            ARTICLES PUBLIER
+          </Typography>
+          <Typography
+            color="textPrimary"
+            variant="h4"
+          >
+            50
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Avatar
+            sx={{
+              backgroundColor: 'error.main',
+              height: 56,
+              width: 56
+            }}
+          >
+            <MoneyIcon />
+          </Avatar>
+        </Grid>
+      </Grid>
+      <Box
+        sx={{
+          pt: 2,
+          display: 'flex',
+          alignItems: 'center'
+        }}
+      >
+      </Box>
+    </CardContent>
+  </Card>
           </Grid>
           <Grid
             item
@@ -136,6 +245,65 @@ export default function  Mbote () {
             xs={12}
           >
             {/* <TotalCustomers /> */}
+            <Card>
+    <CardContent>
+      <Grid
+        container
+        spacing={3}
+        sx={{ justifyContent: 'space-between' }}
+      >
+        <Grid item>
+          <Typography
+            color="textSecondary"
+            gutterBottom
+            variant="overline"
+          >
+            TOTAL DES LECTURES
+          </Typography>
+          <Typography
+            color="textPrimary"
+            variant="h4"
+          >
+            1,6k
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Avatar
+            sx={{
+              backgroundColor: 'success.main',
+              height: 56,
+              width: 56
+            }}
+          >
+            <VisibilityIcon  />
+          </Avatar>
+        </Grid>
+      </Grid>
+      <Box
+        sx={{
+          alignItems: 'center',
+          display: 'flex',
+          pt: 2
+        }}
+      >
+        <ArrowUpwardIcon color="success" />
+        <Typography
+          variant="body2"
+          sx={{
+            mr: 1
+          }}
+        >
+          16%
+        </Typography>
+        <Typography
+          color="textSecondary"
+          variant="caption"
+        >
+        Depuis le mois dernier
+        </Typography>
+      </Box>
+    </CardContent>
+  </Card>
           </Grid>
           {/* <Grid
             item
@@ -154,6 +322,63 @@ export default function  Mbote () {
             xs={12}
           >
             {/* <TotalProfit sx={{ height: '100%' }} /> */}
+            <Card>
+    <CardContent>
+      <Grid
+        container
+        spacing={3}
+        sx={{ justifyContent: 'space-between' }}
+      >
+        <Grid item>
+          <Typography
+            color="textSecondary"
+            gutterBottom
+            variant="overline"
+          >
+            REVENU PUBLICITAIRE
+          </Typography>
+
+          <Typography
+            color="textPrimary"
+            variant="h4"
+          >
+            $23k
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Avatar
+            sx={{
+              backgroundColor: 'primary.main',
+              height: 56,
+              width: 56
+            }}
+          >
+            <AttachMoneyIcon />
+          </Avatar>
+          
+        </Grid>
+      </Grid>
+      <Box  
+        onClick={() => router.push('/publicite')}
+        sx={{
+          cursor: "pointer",
+          alignItems: 'center',
+          display: 'flex',
+          pt: 2
+        }}
+      >
+        <AddIcon color="primary" />
+       
+        <Typography
+       
+          color="primary"
+          variant="caption"
+        >
+        Souscrire a une publicite
+        </Typography>
+      </Box>
+    </CardContent>
+  </Card>
           </Grid>
           <Grid
             item
@@ -176,8 +401,8 @@ export default function  Mbote () {
             position: 'relative'
           }}
         >
-         {/* <Chart type='bar' data={data} /> */}
-           <Bar data={data} />
+         <Chart type='bar' data={data} />
+           {/* <Bar data={data} /> */}
         </Box>
        
       </CardContent>
@@ -192,6 +417,64 @@ export default function  Mbote () {
             xs={12}
           >
             {/* <TrafficByDevice /> */}
+            <Card>
+      <CardHeader title="Traffique par appareil" />
+      <Divider />
+      <CardContent>
+        <Box
+          sx={{
+            height: 275,
+            position: 'relative'
+          }}
+        >
+          
+          <Doughnut
+              data={chartData}
+              options={{
+                responsive: true,
+                maintainAspectRatio: true,
+              }}
+               />
+        </Box>
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            pt: 2
+          }}
+        >
+          {devices.map(({
+            color,
+            icon: Icon,
+            title,
+            value
+          }) => (
+            <Box
+              key={title}
+              sx={{
+                p: 1,
+                textAlign: 'center'
+              }}
+            >
+              <Icon color="action" />
+              <Typography
+                color="textPrimary"
+                variant="body1"
+              >
+                {title}
+              </Typography>
+              <Typography
+                style={{ color }}
+                variant="h4"
+              >
+                {value}
+                %
+              </Typography>
+            </Box>
+          ))}
+        </Box>
+      </CardContent>
+    </Card>
           </Grid>
         
         </Grid>

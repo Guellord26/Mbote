@@ -1,9 +1,16 @@
 import * as React from 'react';
 import Head from 'next/head';
-import { Box, Container} from '@mui/material';
+import { Box, Container, Grid} from '@mui/material';
 import LoadingButton from '@mui/lab/LoadingButton';
 import { DashboardLayout } from '../src/Components/Dashboard/dashboard-layout';
 import {publicites} from "../src/mock/PubApis"
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+
 
 function Publicite(){
   const [loading, setLoading] = React.useState(false);
@@ -21,20 +28,42 @@ function Publicite(){
     <h2 className=" tracking-tight text-gray-900 sm:text-4xl">
       <span className="text-xl font-bold block">Gérer les publicités</span>
     </h2>
-    <h2 className=" tracking-tight text-gray-600 sm:text-4xl mb-4">
+    <h2 className=" tracking-tight text-gray-600 sm:text-4xl mb-10">
          <span className="text-base font-bold block text-grey">Consultez les pblicités qui peuvent passé ou pas sur votre media</span>
     </h2>
-    <div className='rounded-lg bg-white p-8'>
-    <div className="flex flex-row-reverse">
-  
+   
+    <Grid
+            container
+            spacing={3}
+          >
     {
       publicites.map((item, index)=>(
                  
-            <div key={index} className="mr-4">
-                <img src={item.media} className="space-x-4" style={{height:'300px', width: '300px'}}/>
-                <h1 className=" px-2  py-0.5">{item.title}</h1>
-                <h1 className=" px-2  py-0.5">{item.categorie}</h1>
-                <LoadingButton
+          
+            <Grid
+              item
+              lg={4}
+              sm={6}
+              xl={3}
+              xs={12}
+            >
+            <Card key={index} sx={{ maxWidth: 345 }}>
+      <CardMedia
+        component="img"
+        height="140"
+        image={item.media}
+        alt="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {item.title}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+         {item.categorie}
+        </Typography>
+      </CardContent>
+      <CardActions>
+      <LoadingButton
                   size="small"
                   onClick={handleClick}
                   loading={loading}
@@ -43,13 +72,16 @@ function Publicite(){
                 >
                   SOUSCRIRE A LA PUBICITE
                 </LoadingButton>
-            </div>
+      </CardActions>
+    </Card>
+     </Grid>      
            
      
       ))
-    }  
-    </div>
-    </div> 
+    } 
+    </Grid>  
+    {/* </div> */}
+    {/* </div>  */}
     </Container> 
   </div>
  )

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 // import { Editeur } from'../src/components/editor/editeur';
-import { DashboardLayout } from '../src/components/dashboard/dashboard-layout';
+import { DashboardLayout } from '../src/Components/Dashboard/dashboard-layout';
 import React, { useEffect } from "react";
 import dynamic from 'next/dynamic'; 
 import { EditorState } from "draft-js";
@@ -36,8 +36,8 @@ function uploadImageCallBack(file) {
 export const Editeur = () => (
   <div className='mb-32'>
   <Container>
-     <Typography color="textPrimary" variant="h4">
-        EDITEUR
+     <Typography color="textPrimary" variant="h4" sx={{marginBottom: '20px'}}>
+        EDITER UN ARTICLE
      </Typography>
      <form className="group relative">
           <div>

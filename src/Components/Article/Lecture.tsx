@@ -76,7 +76,7 @@ export default function Lecture() {
                              <FacebookIcon /> Facebook
                           </a> {'  '}
                           <a href="">
-                             <TwitterIcon /> TwitterIcon
+                             <TwitterIcon /> Twitter
                           </a>
                           </p>
                           

@@ -4,23 +4,23 @@ export const publicites = [
       // id: uuid(),
       id: 1,
       createdAt: '27/08/2022',    
-      media: '/images/Orange.png',     
+      media: '/images/mpesa.png',     
       title: 'Orange',
-      categorie: "Technologie"
+      categorie: "Téléconmmunication"
     },
     {
         // id: uuid(),
         id: 2,
         createdAt: '27/08/2022',    
-        media: '/images/africell.png',     
-        title: 'Africell ',
-        categorie: "Alimentaire"
+        media: '/images/mpesa.png',     
+        title: 'Africell',
+        categorie: "Téléconmmunication"
       },
       {
         // id: uuid(),
         id: 3,
         createdAt: '27/08/2022',    
-        media: '/images/fanta.png',     
+        media: '/images/mpesa.png',     
         title: 'Fante ',
         categorie: "Alimentaire"
       },
@@ -30,7 +30,7 @@ export const publicites = [
         createdAt: '27/08/2022',    
         media: '/images/mpesa.png',     
         title: "M'pesa",
-        categorie: "Alimentaire"
+        categorie: "Téléconmmunication"
       },  
    
 ] 

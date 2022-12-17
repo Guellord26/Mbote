@@ -11,15 +11,14 @@ import {
   Typography,
 } from "@mui/material";
 import { articles } from "../src/mock/imgesApi";
-// import { ArticleListToolbar } from "../src/Components/Article/article-list-toolbar";
-import { useRouter } from 'next/router';
-import { DashboardLayout } from "../src/components/dashboard/dashboard-layout";
-// import { PaginatedItems } from "../src/components/pagnations/pagination";
+import { ArticleListToolbar } from "../src/Components/Article/article-list-toolbar";
+import { ArticleCard } from "../src/Components/Article/article-card";
+import { DashboardLayout } from "../src/Components/Dashboard/dashboard-layout";
+import { PaginatedItems } from "../src/Components/Pagnations/Pagination";
 import Image from "next/image";
 
 const itemsPerPage = 4;
 const Article = () => {
-  const router = useRouter()
   // const [article, setArticle] = React.useState([])
   const [itemOffset, setItemOffset] = React.useState(0);
 
@@ -50,35 +49,7 @@ const Article = () => {
       </Head>
       <Container>
         <div className="">
-          {/* <ArticleListToolbar /> */}
-          <Box
-        sx={{
-          alignItems: 'center',
-          display: 'flex',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          m: -1
-        }}
-      >
-        <Typography
-          sx={{ m: 1 }}
-          variant="h4"
-        >
-          Articles
-        </Typography>
-        <Box sx={{ m: 1 }}>
-          
-          <Button
-            style={{backgroundColor: '#212121'}}
-            variant="contained"
-            onClick={() => router.push('/editor')}
-          >
-            Ajouter Articles
-          </Button>
-          
-            
-        </Box>
-      </Box>
+          <ArticleListToolbar />
         </div>
 
         <Divider />
@@ -105,25 +76,25 @@ const Article = () => {
         </form>
 
         <div
-          className="mt-10 bg-white rounded-lg "
+          className="mt-10 bg-white rounded-lg md:hidden"
           
         >
           <Container>
             {currentItems.map((item, index) => (
               <div key={index} 
                 onClick={() => lecture(item.id)}
-                className="pt-1 pb-4 divide-y divide-slate-500"
+                className="pt-1 pb-4 divide-y divide-slate-500 max-w-md mx-auto md:max-w-2xl"
                 style={{ cursor: "pointer" }}
               >
-                <div className="flex flex-nowrap mt-2">
-                  <div className="basis-3/12">
-                    <div className="pr-4">
+                <div className="flex flex-nowrap mt-2 ">
+                  <div className="basis-3/12 md:shrink-0 h-48 w-full object-cover md:h-full md:w-48" >
+                    <div className="pr-4 ">
                       <img
                         src={item.media}
                         alt=""
                         style={{
                           marginBottom: "5px",
-                          width: "200px",
+                          width: "300px",
                           height: "150px",
                           borderRadius: "10px",
                         }}
@@ -139,7 +110,7 @@ const Article = () => {
                         {item.title}
                       </h2>
 
-                      <p className="text-sm font-sans text-white text-gray-700">
+                      <p className="text-sm font-sans text-white text-gray-500">
                         {item.description}
                       </p>
                       <p className="text-sm pt-2 text-gray-500">
@@ -164,10 +135,10 @@ const Article = () => {
               pt: 3,
             }}
           >
-            {/* <PaginatedItems
+            <PaginatedItems
               pageCount={pageCount}
               handlePageClick={handlePageClick}
-            /> */}
+            />
           </Box>
         </div>
       </Container>
