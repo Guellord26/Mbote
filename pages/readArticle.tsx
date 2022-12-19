@@ -1,22 +1,21 @@
 import Head from 'next/head';
-import { Box, Container, Grid, Pagination, Divider, Button } from '@mui/material';
 import { DashboardLayout } from '../src/Components/Dashboard/dashboard';
-import Lecture from "../src/Components/Article/lecture"
-
+import { Lecture } from "../src/Components/Article/lecture"
 
 function ReadArticle(){
 
- return( 
-  <>
-    <Head>
-      <title>
-        Article | Mbote
-      </title>
-    </Head>     
-        <Lecture/>   
-  </>
- )
+      return( 
+        <>
+          <Head>
+            <title>
+              Article | Mbote
+            </title>
+          </Head>     
+          <Lecture/>   
+        </>
+      )
 };
+
 ReadArticle.getLayout = (page) => (
   <DashboardLayout >
     {page}

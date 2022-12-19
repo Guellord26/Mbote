@@ -11,7 +11,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 const url = "https://newsapi.org/v2/everything";
 
-export default function Lecture() {
+export function Lecture() {
   
   const [loading, setLoading] = React.useState(true);
   const [myArticle, setMyArticle] = React.useState([]);
