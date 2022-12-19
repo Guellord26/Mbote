@@ -13,8 +13,8 @@ import {
 import { articles } from "../src/mock/imgesApi";
 // import { ArticleListToolbar } from "../src/Components/Article/article-list-toolbar";
 // import { ArticleCard } from "../src/Components/Article/article-card";
-import { DashboardLayout } from "../src/Components/Dashboard/dashboard-layout";
-import { PaginatedItems } from "../src/Components/Pagnations/Pagination";
+import { DashboardLayout } from "../src/Components/Dashboard/dashboard";
+// import { PaginatedItems } from "../src/Components/Pagnations/Pagination";
 import Image from "next/image";
 import { useRouter } from 'next/router';
 
@@ -165,10 +165,10 @@ const Article = () => {
               pt: 3,
             }}
           >
-            <PaginatedItems
+            {/* <PaginatedItems
               pageCount={pageCount}
               handlePageClick={handlePageClick}
-            />
+            /> */}
           </Box>
         </div>
       </Container>

@@ -2,7 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import { Box, Container, Grid} from '@mui/material';
 import LoadingButton from '@mui/lab/LoadingButton';
-import { DashboardLayout } from '../src/Components/Dashboard/dashboard-layout';
+import { DashboardLayout } from '../src/Components/Dashboard/dashboard';
 import {publicites} from "../src/mock/PubApis"
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';

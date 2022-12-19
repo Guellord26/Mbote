@@ -1,6 +1,6 @@
 import Head from 'next/head';
 // import { Editeur } from'../src/components/editor/editeur';
-import { DashboardLayout } from '../src/Components/Dashboard/dashboard-layout';
+import { DashboardLayout } from '../src/Components/Dashboard/dashboard';
 import React, { useEffect } from "react";
 import dynamic from 'next/dynamic'; 
 import { EditorState } from "draft-js";

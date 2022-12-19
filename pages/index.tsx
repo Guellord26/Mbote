@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {CardHeader, Avatar, Box, Card, CardContent, Grid, Divider, Typography, useTheme, Container } from '@mui/material';
 import MoneyIcon from '@mui/icons-material/Money';
-import { DashboardLayout } from '../src/Components/Dashboard/dashboard-layout';
+import { DashboardLayout } from '../src/Components/Dashboard/dashboard';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';

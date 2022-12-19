@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Box, Container, Grid, Pagination, Divider, Button } from '@mui/material';
-import { DashboardLayout } from '../src/Components/Dashboard/dashboard-layout';
+import { DashboardLayout } from '../src/Components/Dashboard/dashboard';
 import Lecture from "../src/Components/Article/Lecture"
 
 
