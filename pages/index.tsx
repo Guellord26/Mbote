@@ -401,7 +401,7 @@ export default function  Mbote () {
             position: 'relative'
           }}
         >
-         <Chart type='bar' data={data} />
+         {/* <Chart type='bar' data={data} /> */}
            {/* <Bar data={data} /> */}
         </Box>
        
