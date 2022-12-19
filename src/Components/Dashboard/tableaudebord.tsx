@@ -7,7 +7,7 @@ import { ChartBar as ChartBarIcon } from '../../icons/chart-bar';
 import { Lock as LockIcon } from '../../icons/lock';
 import { ShoppingBag as ShoppingBagIcon } from '../../icons/shopping-bag';
 import { UserAdd as UserAddIcon } from '../../icons/user-add';
-import { NavItem } from './nav-item';
+import { NavItem } from './navItem';
 import Image from 'next/image'
 
 

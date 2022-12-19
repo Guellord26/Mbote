@@ -11,9 +11,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
-import { items } from './href-link'
+import { items } from './hrefIink'
 import NextLink from 'next/link';
-import { NavItem } from './nav-item';
+import { NavItem } from './navItem';
 import { useRouter } from 'next/router';
 
 const drawerWidth = 240;
